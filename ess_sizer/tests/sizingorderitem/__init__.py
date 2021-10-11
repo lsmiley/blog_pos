@@ -1,0 +1,5 @@
+from .sizingorderitem_delete_test import sizingorderitemDeleteTestCase
+from .sizingorderitem_update_test import sizingorderitemUpdateTestCase
+from .sizingorderitem_detail_test import sizingorderitemDetailTestCase
+from .sizingorderitem_create_test import sizingorderitemCreateTestCase
+from .sizingorderitem_list_test import sizingorderitemListTestCase

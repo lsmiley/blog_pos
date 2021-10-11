@@ -16,7 +16,7 @@ class OrderCreateForm(BaseForm, forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ['date', 'title' ]
+        fields = ['date', 'title']
 
 
 class OrderEditForm(BaseForm, forms.ModelForm):

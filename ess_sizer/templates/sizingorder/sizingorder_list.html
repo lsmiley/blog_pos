@@ -1,0 +1,25 @@
+<h2 class="form-title">sizingorder</h2>
+
+<table class="table table-fluid">
+    <thead>
+        <tr>
+            <th>sizingorder</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sizingorder in object_list %}
+        <tr>
+            <td>{{ sizingorder }}</td>
+            <td><a href="{% url "sizingorder_detail" sizingorder.id %}">view</a></td>
+            <td><a href="{% url "sizingorder_update" sizingorder.id %}">edit</a></td>
+            <td><a href="{% url "sizingorder_delete" sizingorder.id %}">delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url "sizingorder_create" %}">New</a>
+</div>
