@@ -1,6 +1,9 @@
 from django import forms
 
-from .models import Order
+import labordelivery
+from .models import Order, OrderItem
+
+
 
 
 class BaseForm(forms.Form):
@@ -23,4 +26,22 @@ class OrderEditForm(BaseForm, forms.ModelForm):
 
     class Meta:
         model = Order
-        fields = ['date', 'title', 'discount', 'is_paid']
+        fields = '__all__'
+    #
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     self.fields['labordelivery'].queryset = labordelivery.objects.none()
+
+
+class OrderItemEditForm(BaseForm, forms.ModelForm):
+
+    class Meta:
+        model = OrderItem
+        fields = '__all__'
+
+
+class OrderItemForm(forms.ModelForm):
+
+    class Meta:
+        model = OrderItem
+        fields = '__all__'

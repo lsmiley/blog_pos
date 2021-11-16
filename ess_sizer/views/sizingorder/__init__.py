@@ -1,5 +1,0 @@
-from .sizingorder_delete import sizingorderDeleteView
-from .sizingorder_update import sizingorderUpdateView
-from .sizingorder_detail import sizingorderDetailView
-from .sizingorder_create import sizingorderCreateView
-from .sizingorder_list import sizingorderListView
