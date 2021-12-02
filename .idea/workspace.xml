@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="Fix-Up" />
+    <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="Fix-Up">
+      <change afterPath="$PROJECT_DIR$/media/default-url-content-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0013_alter_order_date.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0014_alter_order_date.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_pos/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/edit_orderitem.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/edit_orderitem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/order_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/order_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderitem/templates/edit_orderitem.html" beforeDir="false" afterPath="$PROJECT_DIR$/orderitem/templates/edit_orderitem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderitem/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orderitem/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +134,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/orderitem/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -131,10 +143,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\orderitem\templates" />
+      <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos" />
       <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\orderitem" />
       <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\order\templates" />
       <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\api" />
-      <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\order" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\LARRYSMILEY\PycharmProjects\blog_pos\product\templates\category" />

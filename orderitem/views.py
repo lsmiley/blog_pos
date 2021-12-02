@@ -1,3 +1,4 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import (
     View,
@@ -33,6 +34,30 @@ class OrderItemCreateView(SuccessMessageMixin,
         context["title"] = 'New OrderItem'
         context["savebtn"] = 'Add to OrderItem'
         return context
+
+# ************ Start Of: Inserted as a Test ****************
+# @login_required(login_url="/login_user/")
+def edit_orderitem(request):
+    if request.method!="POST":
+        return HttpResponse("<h2>Method Not Allowed</h2>")
+    else:
+        orderitem = OrderItem.objects.get(id=request.POST.get('id', ''))
+        if orderitem == None:
+            return HttpResponse("<h2>OrderItem Not Found</h2>")
+        else:
+
+            orderitem.numworkstation = request.POST.get('numworkstation', '')
+            orderitem.numserver = request.POST.get('numserver', '')
+            orderitem.numipaddress = request.POST.get('numipaddress', '')
+            orderitem.nummonths = request.POST.get('nummonths', '')
+            orderitem.labordelivery = request.POST.get('labordelivery', '')
+            orderitem.save()
+
+            messages.success(request, "Updated Successfully")
+            return HttpResponseRedirect("update_orderitem/"+str(orderitem.id)+"")
+
+
+# ************ End Of: Inserted as a Test ****************
 
 class OrderItemUpdateView(SuccessMessageMixin,
                              UpdateView):  # updateview class to edit orderitem, mixin used to display message

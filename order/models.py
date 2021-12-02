@@ -406,81 +406,171 @@ class OrderItem(models.Model):
         self.deliveryctrcostfactor = self.labordelivery.deliveryctrcostfactor
 
         # Component Hours and Factor Calculations
-
-        self.prodcomponent1 = self.product.component1
-        self.prodcomponent1_desc = self.product.component1desc
-        self.componentcomplexityfac1 = self.product.componentcomplexityfac1
-        self.prodcomponent1_svrHours = self.product.ComponentHours1
-
-        self.prodcomponent2 = self.product.component1
-        self.prodcomponent2_desc = self.product.component2desc
-        self.componentcomplexityfac2 = self.product.componentcomplexityfac2
-        self.prodcomponent2_svrHours = self.product.ComponentHours2
-
-        self.prodcomponent3 = self.product.component1
-        self.prodcomponent3_desc = self.product.component3desc
-        self.componentcomplexityfac3 = self.product.componentcomplexityfac3
-        self.prodcomponent3_svrHours = self.product.ComponentHours3
-
-        self.prodcomponent4 = self.product.component4
-        self.prodcomponent4_desc = self.product.component4desc
-        self.componentcomplexityfac4 = self.product.componentcomplexityfac4
-        self.prodcomponent4_svrHours = self.product.ComponentHours4
-
-        self.prodcomponent5 = self.product.component5
-        self.prodcomponent5_desc = self.product.component5desc
-        self.componentcomplexityfac5 = self.product.componentcomplexityfac5
-        self.prodcomponent5_svrHours = self.product.ComponentHours5
-
-        self.prodcomponent6 = self.product.component6
-        self.prodcomponent6_desc = self.product.component6desc
-        self.componentcomplexityfac6 = self.product.componentcomplexityfac6
-        self.prodcomponent6_svrHours = self.product.ComponentHours6
-
-        self.prodcomponent7 = self.product.component7
-        self.prodcomponent7_desc = self.product.component7desc
-        self.componentcomplexityfac7 = self.product.componentcomplexityfac7
-        self.prodcomponent7_svrHours = self.product.ComponentHours7
-
-        self.prodcomponent8 = self.product.component8
-        self.prodcomponent8_desc = self.product.component8desc
-        self.componentcomplexityfac8 = self.product.componentcomplexityfac8
-        self.prodcomponent8_svrHours = self.product.ComponentHours8
-
-        self.prodcomponent9 = self.product.component9
-        self.prodcomponent9_desc = self.product.component9desc
-        self.componentcomplexityfac9 = self.product.componentcomplexityfac9
-        self.prodcomponent9_svrHours = self.product.ComponentHours9
-
-        self.prodcomponent10 = self.product.component10
-        self.prodcomponent10_desc = self.product.component3desc
-        self.componentcomplexityfac10 = self.product.componentcomplexityfac10
-        self.prodcomponent10_svrHours = self.product.ComponentHours10
-
-        self.prodcomponent11 = self.product.component11
-        self.prodcomponent11_desc = self.product.component11desc
-        self.componentcomplexityfac11 = self.product.componentcomplexityfac11
-        self.prodcomponent11_svrHours = self.product.ComponentHours11
-
-        self.prodcomponent12 = self.product.component12
-        self.prodcomponent12_desc = self.product.component12desc
-        self.componentcomplexityfac12 = self.product.componentcomplexityfac12
-        self.prodcomponent12_svrHours = self.product.ComponentHours12
-
-        self.prodcomponent13 = self.product.component13
-        self.prodcomponent13_desc = self.product.component13desc
-        self.componentcomplexityfac13 = self.product.componentcomplexityfac13
-        self.prodcomponent13_svrHours = self.product.ComponentHours13
-
-        self.prodcomponent14 = self.product.component14
-        self.prodcomponent14_desc = self.product.component14desc
-        self.componentcomplexityfac14 = self.product.componentcomplexityfac14
-        self.prodcomponent14_svrHours = self.product.ComponentHours14
-
-        self.prodcomponent15 = self.product.component15
-        self.prodcomponent15_desc = self.product.component15desc
-        self.componentcomplexityfac15 = self.product.componentcomplexityfac15
-        self.prodcomponent15_svrHours = self.product.ComponentHours15
+        #
+        # self.prodcomponent1 = self.product.component1
+        # # self.prodcomponent1_desc = self.product.component1desc
+        #
+        # if self.product.component1desc is None:
+        #     self.prodcomponent1_desc = ''
+        # else:
+        #     self.prodcomponent1_desc = self.product.component1desc
+        #
+        # self.componentcomplexityfac1 = self.product.componentcomplexityfac1
+        # self.prodcomponent1_svrHours = self.product.ComponentHours1
+        #
+        # self.prodcomponent2 = self.product.component1
+        # # self.prodcomponent2_desc = self.product.component2desc
+        #
+        # if self.product.component2desc is None:
+        #     self.prodcomponent2_desc = ''
+        # else:
+        #     self.prodcomponent2_desc = self.product.component2desc
+        #
+        # self.componentcomplexityfac2 = self.product.componentcomplexityfac2
+        # self.prodcomponent2_svrHours = self.product.ComponentHours2
+        #
+        # self.prodcomponent3 = self.product.component1
+        # # self.prodcomponent3_desc = self.product.component3desc
+        #
+        # if self.product.component3desc is None:
+        #     self.prodcomponent3_desc = ''
+        # else:
+        #     self.prodcomponent3_desc = self.product.component3desc
+        #
+        # self.componentcomplexityfac3 = self.product.componentcomplexityfac3
+        # self.prodcomponent3_svrHours = self.product.ComponentHours3
+        #
+        # self.prodcomponent4 = self.product.component4
+        # # self.prodcomponent4_desc = self.product.component4desc
+        #
+        # if self.product.component4desc is None:
+        #     self.prodcomponent4_desc = ''
+        # else:
+        #     self.prodcomponent4_desc = self.product.component4desc
+        #
+        # self.componentcomplexityfac4 = self.product.componentcomplexityfac4
+        # self.prodcomponent4_svrHours = self.product.ComponentHours4
+        #
+        # self.prodcomponent5 = self.product.component5
+        # # self.prodcomponent5_desc = self.product.component5desc
+        #
+        # if self.product.component5desc is None:
+        #     self.prodcomponent5_desc = ''
+        # else:
+        #     self.prodcomponent5_desc = self.product.component5desc
+        #
+        # self.componentcomplexityfac5 = self.product.componentcomplexityfac5
+        # self.prodcomponent5_svrHours = self.product.ComponentHours5
+        #
+        # self.prodcomponent6 = self.product.component6
+        # # self.prodcomponent6_desc = self.product.component6desc
+        #
+        # if self.product.component6desc is None:
+        #     self.prodcomponent6_desc = ''
+        # else:
+        #     self.prodcomponent6_desc = self.product.component6desc
+        #
+        # self.componentcomplexityfac6 = self.product.componentcomplexityfac6
+        # self.prodcomponent6_svrHours = self.product.ComponentHours6
+        #
+        # self.prodcomponent7 = self.product.component7
+        # # self.prodcomponent7_desc = self.product.component7desc
+        #
+        # if self.product.component7desc is None:
+        #     self.prodcomponent7_desc = ''
+        # else:
+        #     self.prodcomponent7_desc = self.product.component7desc
+        #
+        # self.componentcomplexityfac7 = self.product.componentcomplexityfac7
+        # self.prodcomponent7_svrHours = self.product.ComponentHours7
+        #
+        # self.prodcomponent8 = self.product.component8
+        # # self.prodcomponent8_desc = self.product.component8desc
+        #
+        # if self.product.component8desc is None:
+        #     self.prodcomponent8_desc = ''
+        # else:
+        #     self.prodcomponent8_desc = self.product.component8desc
+        #
+        # self.componentcomplexityfac8 = self.product.componentcomplexityfac8
+        # self.prodcomponent8_svrHours = self.product.ComponentHours8
+        #
+        # self.prodcomponent9 = self.product.component9
+        # # self.prodcomponent9_desc = self.product.component9desc
+        #
+        # if self.product.component9desc is None:
+        #     self.prodcomponent9_desc = ''
+        # else:
+        #     self.prodcomponent9_desc = self.product.component9desc
+        #
+        # self.componentcomplexityfac9 = self.product.componentcomplexityfac9
+        # self.prodcomponent9_svrHours = self.product.ComponentHours9
+        #
+        # self.prodcomponent10 = self.product.component10
+        # # self.prodcomponent10_desc = self.product.component3desc
+        #
+        # if self.product.component10desc is None:
+        #     self.prodcomponent10_desc = ''
+        # else:
+        #     self.prodcomponent10_desc = self.product.component10desc
+        #
+        # self.componentcomplexityfac10 = self.product.componentcomplexityfac10
+        # self.prodcomponent10_svrHours = self.product.ComponentHours10
+        #
+        # self.prodcomponent11 = self.product.component11
+        # # self.prodcomponent11_desc = self.product.component11desc
+        #
+        # if self.product.component11desc is None:
+        #     self.prodcomponent11_desc = ''
+        # else:
+        #     self.prodcomponent11_desc = self.product.component11desc
+        #
+        # self.componentcomplexityfac11 = self.product.componentcomplexityfac11
+        # self.prodcomponent11_svrHours = self.product.ComponentHours11
+        #
+        # self.prodcomponent12 = self.product.component12
+        # # self.prodcomponent12_desc = self.product.component12desc
+        #
+        # if self.product.component12desc is None:
+        #     self.prodcomponent12_desc = ''
+        # else:
+        #     self.prodcomponent12_desc = self.product.component12desc
+        #
+        # self.componentcomplexityfac12 = self.product.componentcomplexityfac12
+        # self.prodcomponent12_svrHours = self.product.ComponentHours12
+        #
+        # self.prodcomponent13 = self.product.component13
+        # # self.prodcomponent13_desc = self.product.component13desc
+        #
+        # if self.product.component13desc is None:
+        #     self.prodcomponent13_desc = ''
+        # else:
+        #     self.prodcomponent13_desc = self.product.component13desc
+        #
+        # self.componentcomplexityfac13 = self.product.componentcomplexityfac13
+        # self.prodcomponent13_svrHours = self.product.ComponentHours13
+        #
+        # self.prodcomponent14 = self.product.component14
+        # # self.prodcomponent14_desc = self.product.component14desc
+        #
+        # if self.product.component14desc is None:
+        #     self.prodcomponent14_desc = ''
+        # else:
+        #     self.prodcomponent14_desc = self.product.component14desc
+        #
+        # self.componentcomplexityfac14 = self.product.componentcomplexityfac14
+        # self.prodcomponent14_svrHours = self.product.ComponentHours14
+        #
+        # self.prodcomponent15 = self.product.component15
+        # # self.prodcomponent15_desc = self.product.component15desc
+        #
+        # if self.product.component15desc is None:
+        #     self.prodcomponent15_desc = ''
+        # else:
+        #     self.prodcomponent15_desc = self.product.component15desc
+        #
+        # self.componentcomplexityfac15 = self.product.componentcomplexityfac15
+        # self.prodcomponent15_svrHours = self.product.ComponentHours15
 
 
 
@@ -682,7 +772,7 @@ class OrderItem(models.Model):
 
         # AddlConsole Hours Calculation
 
-        enterednumConsole = int(self.numipaddress)
+        enterednumConsole = int(self.qty)
         # Hours Calculation for Server Line Item
 
         if enterednumConsole >= 200500:
@@ -747,7 +837,7 @@ class OrderItem(models.Model):
 
         # region AppChange Hours Calc
         enterednumappchange = int(self.numappchange)
-        newhoursfactor = 0.07031;
+        newhoursfactor = 0.07031
         appchangecac = 0.25
 
         # Factor Calc

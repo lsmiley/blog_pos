@@ -108,30 +108,16 @@ class OrderUpdateView(UpdateView):
     def get_success_url(self):
         return reverse('update_order', kwargs={'pk': self.object.id})
 
-    # def get_success_url(self):
-    #     prodvendorobj = Prodvendor.objects.all
-    #     productobj = Product.objects.all
-    #     return reverse('update_order', {"prodvendordata": prodvendorobj, "productdata": productobj}, kwargs={'pk': self.object.id})
-
-    def cascadingddl(request):
-        vendorobj = Prodvendor.objects.all
-        productobj = Product.objects.all
-        return render(request, 'order_update.html', {"Prodvendor": vendorobj, "Product": productobj})
-
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         instance = self.object
         qs_p = Product.objects.filter(active=True)[:12]
         products = ProductTable(qs_p)
         order_items = OrderItemTable(instance.order_items.all())
-        orderitems = OrderItem.objects.all()  # show the list
-        # orderitems2 = OrderItem.objects.all()  # show the list  # show the list
-        orderitem_count = orderitems.count()
+        # orderitems = OrderItem.objects.all()  # show the list
+        # orderitem_count = orderitems.count()
         RequestConfig(self.request).configure(products)
         RequestConfig(self.request).configure(order_items)
-        prodvendors = Prodvendor.objects.all
-        avproduct = Product.objects.all
         context.update(locals())
         return context
 
