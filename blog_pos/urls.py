@@ -10,7 +10,7 @@ from django.views.generic.base import TemplateView
 from order import apiViews
 
 
-from order.views import (HomepageView, OrderUpdateView, CreateOrderView, delete_order,
+from order.views import (HomepageView, OrderUpdateView, CreateOrderView, GboUpdateView, delete_order,
                          OrderListView, done_order_view, auto_create_order_view,
                          ajax_add_product, ajax_modify_order_item, ajax_search_products, ajax_calculate_results_view,
                          order_action_view, ajax_calculate_category_view, OrderItemUpdateView, ajax_get_products, saveorderitem
@@ -27,8 +27,11 @@ urlpatterns = [
     path('acctcust/', include('acctcust.urls')),
     path('labordeliverytype/', include('labordeliverytype.urls')),
     path('labordelivery/', include('labordelivery.urls')),
+    path('tntworksheet/', include('tntworksheet.urls')),
+    path('statusstate/', include('statusstate.urls')),
     path('prodvendor/', include('prodvendor.urls')),
     path('orderitem/', include('orderitem.urls')),
+
     path('product/', include('product.urls')),
     path('category/', include('category.urls')),
     path('', HomepageView.as_view(), name='homepage'),
@@ -36,8 +39,11 @@ urlpatterns = [
     path('create/', CreateOrderView.as_view(), name='create-order'),
     path('create-auto/', auto_create_order_view, name='create_auto'),
     path('update/<int:pk>/', OrderUpdateView.as_view(), name='update_order'),
+    path('updategbo/<int:pk>/', GboUpdateView.as_view(), name='update_gbo'),
+    path('gbo/<int:pk>/', GboUpdateView.as_view(), name='gbo'),
     path('updateitem/<int:pk>/', OrderItemUpdateView.as_view(), name='update_orderitem'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+
 
     path('orderitem/orderitem/<pk>/edit', OrderItemUpdateView.as_view(), name='edit-orderitem'),
 

@@ -68,6 +68,14 @@ class OrderItemTable(tables.Table):
             <span class="btn btn-info btn-sm edit" style="cursor:pointer;" data-toggle="modal" data-target="#modal-Edit"></span>
             <a href="{% url 'orderitem' %}orderitem/{{ record.id }}/edit">Update</a>
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'orderitem' %}" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Sizing Detail</span></a>
+            <a href="{% url 'orderitem' %}orderitem/{{ record.id }}/edit" class="btn btn-block btn-info btn-xs">Details</a>
+            
+            
+
+           
+            
+
+           
                                     </div>
                                 </div>
     ''', orderable=False)

@@ -6,7 +6,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">Vendors List</h4>
+                    <h4 class="page-title">TnT Worksheets</h4>
                     <div class="ml-auto text-right">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
@@ -27,10 +27,10 @@
                         </div>
                         <div class="comment-widgets scrollable">
                                <div class="row" style="color: #ea2088; font-style: bold; font-size: 3rem; ">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">Vendors List</div>
-        <div class="col-md-3">
-            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-prodvendor' %}">Add New Vendor</a> </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">TnT Worksheets</div>
+        <div class="col-md-2">
+            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-tntworksheet' %}">Add New Vendor</a> </div>
         </div>
     </div>
 
@@ -53,30 +53,29 @@
 
         <thead class="thead-inverse align-middle">
             <tr>
-                <th width="20%">Vendor Name</th>
-                <th width="20%">Code/Short Name</th>
-                <th width="20%">Category</th>
-                <th width="20%">Web/URL</th>
-                <th width="20%"># Products</th>
-
+                <th width="20%">tntdescription </th>
+                <th width="20%">managementmod1stline</th>
+                <th width="20%">managementmod2ndline</th>
+                <th width="20%">totaltransitiontotalfte </th>
+                <th width="20%">totaltransitiontotalhours </th>
             </tr>
         </thead>
 
 {% if object_list %}
 
         <tbody>
-            {% for prodvendor in object_list %}
+            {% for tntworksheet in object_list %}
                 <tr>
-                    <td class="align-middle"><h4>{{ prodvendor.vendorname }}</h4></td>
-                    <td class="align-middle">{{ prodvendor.vendorcodename }}</td>
-                    <td class="align-middle">{{ prodvendor.vendorcategory }}</td>
-                    <td class="align-middle">{{ prodvendor.vendorweburl }}</td>
-                    <td class="align-middle">{{ prodvendor.numvendorproducts }}</td>
+                    <td class="align-middle"><h4>{{ tntworksheet.tntdescription }}</h4></td>
+                    <td class="align-middle">{{ tntworksheet.managementmod1stline }}</td>
+                    <td class="align-middle">{{ tntworksheet.managementmod2ndline }}</td>
+                    <td class="align-middle">{{ tntworksheet.totaltransitiontotalfte }}</td>
+                    <td class="align-middle">{{ tntworksheet.totaltransitiontotalhours }}</td>
 
                     <td class="align-middle">
-                        <a href="{% url 'edit-prodvendor' prodvendor.pk %}" class="btn btn-app"><i class="fas fa-edit"></i> Edit</a>
-                        <a href="{% url 'edit-prodvendor' prodvendor.pk %}" class="btn ghost-button">Edit Details</a>
-                        <a href="{% url 'delete-prodvendor' prodvendor.pk %}" class="btn ghost-red"> Delete Status </a>
+                        <a href="{% url 'edit-tntworksheet' tntworksheet.pk %}" class="btn btn-app"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="{% url 'edit-tntworksheet' tntworksheet.pk %}" class="btn ghost-button">Edit Details</a>
+                        <a href="{% url 'delete-tntworksheet' tntworksheet.pk %}" class="btn ghost-red"> Delete TnTWorksheet </a>
                     </td>
                 </tr>
             {% endfor %}

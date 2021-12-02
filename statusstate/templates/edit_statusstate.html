@@ -17,27 +17,27 @@
         {{ form.non_field_errors }}
 
         <div class="form-group">
-            {{ form.vendorname.errors }}
-            <label for="{{ form.vendorname.id_for_label }}">Name:</label>
-            {{ form.vendorname }}
+            {{ form.statusstatename.errors }}
+            <label for="{{ form.statusstatename.id_for_label }}">Name:</label>
+            {{ form.statusstatename }}
         </div>
 
         <div class="form-group">
-            {{ form.vendorcodename.errors }}
-            <label for="{{ form.vendorcodename.id_for_label }}">Code/Short Name:</label>
-            {{ form.vendorcodename }}
+            {{ form.statusstatedesc.errors }}
+            <label for="{{ form.statusstatedesc.id_for_label }}">Description:</label>
+            {{ form.statusstatedesc }}
         </div>
 
         <div class="form-group ">
-            {{ form.vendorcategory.errors }}
-            <label for="{{ form.vendorcategory.id_for_label }}">Category/Type:</label>
-            {{ form.vendorcategory  }}
+            {{ form.statusstatetype.errors }}
+            <label for="{{ form.statusstatetype.id_for_label }}">Type:</label>
+            {{ form.statusstatetype  }}
         </div>
 
         <div class="form-group ">
-            {{ form.vendornote.errors }}
-            <label for="{{ form.mevendornotemo.id_for_label }}">Memo/Note:</label>
-            {{ form.vendornote }}
+            {{ form.memo.errors }}
+            <label for="{{ form.memo.id_for_label }}"># Products:</label>
+            {{ form.memo }}
         </div>
 
 
@@ -47,13 +47,13 @@
 
         <div class="align-middle">
             <button type="submit" class="btn ghost-green">{{ savebtn }}</button>
-            {% if title == "New Prodvendor" %}
+            {% if title == "New Statusstate" %}
                 <button type="reset" class="btn ghost-blue" >Reset</button>
             {% endif %}
             {% if delbtn %}
-                <a href="{% url 'delete-prodvendor' object.pk %}" class="btn ghost-red"> Delete Vendor </a>
+                <a href="{% url 'delete-statusstate' object.pk %}" class="btn ghost-red"> Delete Vendor </a>
             {% endif %}
-            <a href="{% url 'prodvendor' %}" class="btn ghost-button">Cancel</a>
+            <a href="{% url 'statusstate' %}" class="btn ghost-button">Cancel</a>
         </div>
 
     </form>

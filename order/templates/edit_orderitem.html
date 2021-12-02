@@ -86,9 +86,9 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group ">
-                            {{ form.addlconhourscalc.errors }}
-<!--                            <label for="{{ form.addlconhourscalc.id_for_label }}">addlconhourscalc:</label>-->
-                            {{ form.addlconhourscalc }}
+                            {{ form.addlconfte.errors }}
+<!--                            <label for="{{ form.addlconfte.id_for_label }}">addlconfte:</label>-->
+                            {{ form.addlconfte }}
                         </div>
                     </div>
 				</div>
@@ -116,9 +116,9 @@
                     </div>
                     <div class="col-md-2">
                     <div class="form-group ">
-                            {{ form.addlconhourscalc.errors }}
-<!--                            <label for="{{ form.addlconhourscalc.id_for_label }}">addlconhourscalc:</label>-->
-                            {{ form.addlconhourscalc }}
+                            {{ form.workstationfte.errors }}
+<!--                            <label for="{{ form.workstationfte.id_for_label }}">workstationfte:</label>-->
+                            {{ form.workstationfte }}
                         </div>
                     </div>
 
@@ -146,9 +146,9 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group ">
-                            {{ form.addlconhourscalc.errors }}
-<!--                            <label for="{{ form.addlconhourscalc.id_for_label }}">addlconhourscalc:</label>-->
-                            {{ form.addlconhourscalc }}
+                            {{ form.serverfte.errors }}
+<!--                            <label for="{{ form.serverfte.id_for_label }}">serverfte:</label>-->
+                            {{ form.serverfte }}
                         </div>
                     </div>
 				</div>
@@ -176,9 +176,9 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group ">
-                            {{ form.addlconhourscalc.errors }}
-<!--                            <label for="{{ form.addlconhourscalc.id_for_label }}">addlconhourscalc:</label>-->
-                            {{ form.addlconhourscalc }}
+                            {{ form.ipendpointfte.errors }}
+<!--                            <label for="{{ form.ipendpointfte.id_for_label }}">ipendpointfte:</label>-->
+                            {{ form.ipendpointfte }}
                         </div>
                     </div>
 
@@ -205,16 +205,14 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group ">
-                            {{ form.addlconhourscalc.errors }}
-<!--                            <label for="{{ form.addlconhourscalc.id_for_label }}">addlconhourscalc:</label>-->
-                            {{ form.addlconhourscalc }}
+
                         </div>
                         </div>
                  </div>
 
             </div>
 </p>
-
+                <button onclick="goBack1()">Go Back</button>
 
 <!--                <div class="row">-->
 <!--                    -->
@@ -267,6 +265,7 @@
 
 
 					</p>
+                                    <button onclick="goBack2()">Update</button>
 				</div>
 				<div class="card-footer">
 					Card footer
@@ -1410,40 +1409,7 @@
 
                         <div class="form-horizontal" align="right">
 
-                        <div class="form-group ">
-                            {{ form.prodcomponent1_ttl_hours.errors }}
 
-                            {{ form.prodcomponent1_ttl_hours }}
-                    </div>
-
-                    <div class="form-group ">
-                             {{ form.prodcomponent2_ttl_hours.errors }}
-
-                             {{ form.prodcomponent2_ttl_hours }}
-                    </div>
-                                        <div class="form-group ">
-                             {{ form.prodcomponent3_ttl_hours.errors }}
-
-                             {{ form.prodcomponent3_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent4_ttl_hours.errors }}
-
-                             {{ form.prodcomponent4_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent5_ttl_hours.errors }}
-
-                             {{ form.prodcomponent5_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent6_ttl_hours.errors }}
-
-                             {{ form.prodcomponent6_ttl_hours }}
-                    </div>
 
 
                 </div>
@@ -1464,40 +1430,7 @@
 
                         <div class="form-horizontal" align="right">
 
-                        <div class="form-group ">
-                            {{ form.prodcomponent1_ttl_hours.errors }}
 
-                            {{ form.prodcomponent1_ttl_hours }}
-                    </div>
-
-                    <div class="form-group ">
-                             {{ form.prodcomponent2_ttl_hours.errors }}
-
-                             {{ form.prodcomponent2_ttl_hours }}
-                    </div>
-                                        <div class="form-group ">
-                             {{ form.prodcomponent3_ttl_hours.errors }}
-
-                             {{ form.prodcomponent3_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent4_ttl_hours.errors }}
-
-                             {{ form.prodcomponent4_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent5_ttl_hours.errors }}
-
-                             {{ form.prodcomponent5_ttl_hours }}
-                    </div>
-
-                                        <div class="form-group ">
-                             {{ form.prodcomponent6_ttl_hours.errors }}
-
-                             {{ form.prodcomponent6_ttl_hours }}
-                    </div>
 
 
                 </div>
@@ -1520,11 +1453,11 @@
 
 
 
-                                            <div class="form-group ">
-                            {{ form.price.errors }}
-                            <label for="{{ form.price.id_for_label }}">Price:</label>
-                            {{ form.price }}
-                        </div>
+<!--                        <div class="form-group ">-->
+<!--                            {{ form.price.errors }}-->
+<!--                            <label for="{{ form.price.id_for_label }}">Price:</label>-->
+<!--                            {{ form.price }}-->
+<!--                        </div>-->
 
                                             <div class="form-group ">
                             {{ form.deliveryoption.errors }}
@@ -1639,12 +1572,6 @@
                             {{ form.band10percentage }}
                         </div>
 
-                                            <div class="form-group ">
-                            {{ form.band9percentage.errors }}
-                            <label for="{{ form.band9percentage.id_for_label }}">band9percentage:</label>
-                            {{ form.band9percentage }}
-                        </div>
-
 
                                             <div class="form-group ">
                             {{ form.bandstotalcount.errors }}
@@ -1652,11 +1579,6 @@
                             {{ form.bandstotalcount }}
                         </div>
 
-                                            <div class="form-group ">
-                            {{ form.band2percentage.errors }}
-                            <label for="{{ form.band2percentage.id_for_label }}">band2percentage:</label>
-                            {{ form.band2percentage }}
-                        </div>
 
                                             <div class="form-group ">
                             {{ form.bandstotalpercentage.errors }}
@@ -1665,17 +1587,12 @@
                         </div>
 
                                             <div class="form-group ">
-                            {{ form.band2percentage.errors }}
-                            <label for="{{ form.band2percentage.id_for_label }}">band2percentage:</label>
-                            {{ form.band2percentage }}
-                        </div>
-
-                                            <div class="form-group ">
                             {{ form.nummonths.errors }}
                             <label for="{{ form.nummonths.id_for_label }}">Nummonths:</label>
                             {{ form.nummonths }}
                         </div>
 
+<!--            Component Server Hours-->
                                             <div class="form-group ">
                             {{ form.prodcomponent1_svrHours.errors }}
                             <label for="{{ form.prodcomponent1_svrHours.id_for_label }}">Prodcomponent1_svrHours:</label>
@@ -1696,10 +1613,9 @@
 
                                  <div class="form-group ">
                             {{ form.prodcomponent4_svrHours.errors }}
-                            <label for="{{ form.prodcomponent4_svrHours.id_for_label }}">Prodcomponent1_svrHours:</label>
+                            <label for="{{ form.prodcomponent4_svrHours.id_for_label }}">prodcomponent4_svrHours:</label>
                             {{ form.prodcomponent4_svrHours }}
                         </div>
-
 
                                                                 <div class="form-group ">
                             {{ form.prodcomponent5_svrHours.errors }}
@@ -1767,6 +1683,104 @@
                             <label for="{{ form.prodcomponent15_svrHours.id_for_label }}">Prodcomponent15_svrHours:</label>
                             {{ form.prodcomponent15_svrHours }}
                         </div>
+
+
+                    <!--            Component Workstation Hours-->
+                                            <div class="form-group ">
+                            {{ form.prodcomponent1_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent1_wkstnhours.id_for_label }}">Prodcomponent1_wkstnhours:</label>
+                            {{ form.prodcomponent1_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent2_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent2_wkstnhours.id_for_label }}">Prodcomponent2_wkstnhours:</label>
+                            {{ form.prodcomponent2_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent3_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent3_wkstnhours.id_for_label }}">Prodcomponent3_wkstnhours:</label>
+                            {{ form.prodcomponent3_wkstnhours }}
+                        </div>
+
+                                 <div class="form-group ">
+                            {{ form.prodcomponent4_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent4_wkstnhours.id_for_label }}">Prodcomponent4_wkstnhours:</label>
+                            {{ form.prodcomponent4_wkstnhours }}
+                        </div>
+
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent5_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent5_wkstnhours.id_for_label }}">Prodcomponent5_wkstnhours:</label>
+                            {{ form.prodcomponent5_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent6_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent6_wkstnhours.id_for_label }}">Prodcomponent6_wkstnhours:</label>
+                            {{ form.prodcomponent6_wkstnhours }}
+                        </div>
+
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent7_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent7_wkstnhours.id_for_label }}">Prodcomponent7_wkstnhours:</label>
+                            {{ form.prodcomponent7_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent8_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent8_wkstnhours.id_for_label }}">Prodcomponent8_wkstnhours:</label>
+                            {{ form.prodcomponent8_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent9_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent9_wkstnhours.id_for_label }}">Prodcomponent9_wkstnhours:</label>
+                            {{ form.prodcomponent9_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent10_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent10_wkstnhours.id_for_label }}">Prodcomponent10_wkstnhours:</label>
+                            {{ form.prodcomponent10_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent11_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent11_wkstnhours.id_for_label }}">Prodcomponent11_wkstnhours:</label>
+                            {{ form.prodcomponent11_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent12_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent12_wkstnhours.id_for_label }}">Prodcomponent12_wkstnhours:</label>
+                            {{ form.prodcomponent12_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent13_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent13_wkstnhours.id_for_label }}">Prodcomponent13_wkstnhours:</label>
+                            {{ form.prodcomponent13_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent14_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent14_wkstnhours.id_for_label }}">Prodcomponent14_wkstnhours:</label>
+                            {{ form.prodcomponent14_wkstnhours }}
+                        </div>
+
+                                                                <div class="form-group ">
+                            {{ form.prodcomponent15_wkstnhours.errors }}
+                            <label for="{{ form.prodcomponent15_wkstnhours.id_for_label }}">Prodcomponent15_wkstnhours:</label>
+                            {{ form.prodcomponent15_wkstnhours }}
+                        </div>
+
+
+
+<!--            Component IP Hours-->
                                             <div class="form-group ">
                             {{ form.prodcomponent1_iphours.errors }}
                             <label for="{{ form.prodcomponent1_iphours.id_for_label }}">Prodcomponent1_ipHours:</label>
@@ -1860,6 +1874,10 @@
                         </div>
 
 
+
+
+<!--            Component Total Hours-->
+
                                                                 <div class="form-group ">
                             {{ form.prodcomponent1_ttl_hours.errors }}
                             <label for="{{ form.prodcomponent1_ttl_hours.id_for_label }}">Prodcomponent1_ttl_hours:</label>
@@ -1952,7 +1970,10 @@
                             {{ form.prodcomponent15_ttl_hours }}
                         </div>
 
-                                            <div class="form-group ">
+
+                    <!--            Component Total FTE-->
+
+                        <div class="form-group ">
                             {{ form.prodcomponent1_ttl_fte.errors }}
                             <label for="{{ form.prodcomponent1_ttl_fte.id_for_label }}">Prodcomponent1_ttl_fte:</label>
                             {{ form.prodcomponent1_ttl_fte }}
@@ -2068,8 +2089,19 @@
                             <label for="{{ form.prodimage.id_for_label }}">Prodimage:</label>
                             {{ form.prodimage }}
                         </div>
-p
 
+
+                        <div class="form-group ">
+                            {{ form.desc.errors }}
+                            <label for="{{ form.desc.id_for_label }}">desc:</label>
+                            {{ form.desc }}
+                        </div>
+
+                        <div class="form-group ">
+                            {{ form.numappchange.errors }}
+                            <label for="{{ form.numappchange.id_for_label }}">numappchange:</label>
+                            {{ form.numappchange }}
+                        </div>
 
 
 
@@ -2090,16 +2122,40 @@ p
 
                 <div class="align-middle">
                     <button type="submit" class="btn ghost-green">{{ savebtn }}</button>
-                    {% if title == "New Product OrderItem" %}
+                    {% if title == "Sizing Items" %}
                         <button type="reset" class="btn ghost-blue" >Reset</button>
                     {% endif %}
                     {% if delbtn %}
                         <a href="{% url 'delete-orderitem' object.pk %}" class="btn ghost-red"> Delete OrderItem </a>
                     {% endif %}
                     <a href="{% url 'orderitem' %}" class="btn ghost-button">Cancel</a>
-                </div>
 
-          </div>
+                </div>
+                <a href="{{ 'order.id' }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
+
+
+                <button onclick="goBack2()">Update</button>
+<button type="submit" class="btn btn-success">Save</button>
+
+</form>
+
+<script>
+function goBack1() {
+  window.history.back();
+}
+</script>
+
+<script>
+function goBack2() {
+  window.history.back();
+}
+</script>
+
+<script>
+function goBack2() {
+  window.history.back();
+}
+</script>
 
 
 

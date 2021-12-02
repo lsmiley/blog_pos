@@ -11,6 +11,7 @@ from django.contrib import messages
 from django.template.loader import render_to_string
 from django.http import JsonResponse, HttpResponse, QueryDict, HttpResponseRedirect
 from django.db.models import Sum
+from django.views.generic.detail import SingleObjectMixin
 from django_tables2 import RequestConfig
 from rest_framework.templatetags.rest_framework import data
 
@@ -21,6 +22,13 @@ from .forms import OrderCreateForm, OrderEditForm, OrderItemEditForm, OrderItemF
 from product.models import Product, Category, Prodvendor
 from .tables import ProductTable, OrderItemTable, OrderTable
 from .utils import set_pagination
+
+from django.views.generic.edit import (
+    FormView,
+    View,
+    CreateView,
+    UpdateView
+)
 
 
 import datetime
@@ -108,16 +116,28 @@ class OrderUpdateView(UpdateView):
     def get_success_url(self):
         return reverse('update_order', kwargs={'pk': self.object.id})
 
-    # def get_success_url(self):
-    #     prodvendorobj = Prodvendor.objects.all
-    #     productobj = Product.objects.all
-    #     return reverse('update_order', {"prodvendordata": prodvendorobj, "productdata": productobj}, kwargs={'pk': self.object.id})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        instance = self.object
+        qs_p = Product.objects.filter(active=True)[:12]
+        products = ProductTable(qs_p)
+        order_items = OrderItemTable(instance.order_items.all())
+        # orderitems = OrderItem.objects.all()  # show the list
+        # orderitem_count = orderitems.count()
+        RequestConfig(self.request).configure(products)
+        RequestConfig(self.request).configure(order_items)
+        context.update(locals())
+        return context
 
-    def cascadingddl(request):
-        vendorobj = Prodvendor.objects.all
-        productobj = Product.objects.all
-        return render(request, 'order_update.html', {"Prodvendor": vendorobj, "Product": productobj})
 
+@method_decorator(staff_member_required, name='dispatch')
+class GboUpdateView(UpdateView):
+    model = Order
+    template_name = 'gboitem.html'
+    form_class = OrderEditForm
+
+    def get_success_url(self):
+        return reverse('update_gbo', kwargs={'pk': self.object.id})
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -125,15 +145,13 @@ class OrderUpdateView(UpdateView):
         qs_p = Product.objects.filter(active=True)[:12]
         products = ProductTable(qs_p)
         order_items = OrderItemTable(instance.order_items.all())
-        orderitems = OrderItem.objects.all()  # show the list
-        # orderitems2 = OrderItem.objects.all()  # show the list  # show the list
-        orderitem_count = orderitems.count()
+        # orderitems = OrderItem.objects.all()  # show the list
+        # orderitem_count = orderitems.count()
         RequestConfig(self.request).configure(products)
         RequestConfig(self.request).configure(order_items)
-        prodvendors = Prodvendor.objects.all
-        avproduct = Product.objects.all
         context.update(locals())
         return context
+
 
 @staff_member_required
 def delete_order(request, pk):
@@ -295,7 +313,7 @@ def edit_orderitem(request):
         if orderitem == None:
             return HttpResponse("<h2>OrderItem Not Found</h2>")
         else:
-
+            order_num = Order.id
             orderitem.numworkstation = request.POST.get('numworkstation', '')
             orderitem.numserver = request.POST.get('numserver', '')
             orderitem.numipaddress = request.POST.get('numipaddress', '')
@@ -304,7 +322,8 @@ def edit_orderitem(request):
             orderitem.save()
 
             messages.success(request, "Updated Successfully")
-            return HttpResponseRedirect("update_orderitem/"+str(orderitem.id)+"")
+            # return HttpResponseRedirect("update_orderitem/"+str(orderitem.id)+"")
+            return HttpResponseRedirect("update1/"+str(order_num)+"")
 
 
 

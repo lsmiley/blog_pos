@@ -28,9 +28,9 @@
                         <div class="comment-widgets scrollable">
                                <div class="row" style="color: #ea2088; font-style: bold; font-size: 3rem; ">
         <div class="col-md-3"></div>
-        <div class="col-md-6">Vendors List</div>
+        <div class="col-md-6">Status State List</div>
         <div class="col-md-3">
-            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-prodvendor' %}">Add New Vendor</a> </div>
+            <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-statusstate' %}">Add New Vendor</a> </div>
         </div>
     </div>
 
@@ -53,30 +53,27 @@
 
         <thead class="thead-inverse align-middle">
             <tr>
-                <th width="20%">Vendor Name</th>
-                <th width="20%">Code/Short Name</th>
-                <th width="20%">Category</th>
-                <th width="20%">Web/URL</th>
-                <th width="20%"># Products</th>
-
+                <th width="30%">Status Name</th>
+                <th width="15%">Description</th>
+                <th width="20%">Type</th>
+                <th width="10%">Memo</th>
             </tr>
         </thead>
 
 {% if object_list %}
 
         <tbody>
-            {% for prodvendor in object_list %}
+            {% for statusstate in object_list %}
                 <tr>
-                    <td class="align-middle"><h4>{{ prodvendor.vendorname }}</h4></td>
-                    <td class="align-middle">{{ prodvendor.vendorcodename }}</td>
-                    <td class="align-middle">{{ prodvendor.vendorcategory }}</td>
-                    <td class="align-middle">{{ prodvendor.vendorweburl }}</td>
-                    <td class="align-middle">{{ prodvendor.numvendorproducts }}</td>
+                    <td class="align-middle"><h4>{{ statusstate.statusstatename }}</h4></td>
+                    <td class="align-middle">{{ statusstate.statusstatedesc }}</td>
+                    <td class="align-middle">{{ statusstate.statusstatetype }}</td>
+                    <td class="align-middle">{{ statusstate.memo }}</td>
 
                     <td class="align-middle">
-                        <a href="{% url 'edit-prodvendor' prodvendor.pk %}" class="btn btn-app"><i class="fas fa-edit"></i> Edit</a>
-                        <a href="{% url 'edit-prodvendor' prodvendor.pk %}" class="btn ghost-button">Edit Details</a>
-                        <a href="{% url 'delete-prodvendor' prodvendor.pk %}" class="btn ghost-red"> Delete Status </a>
+                        <a href="{% url 'edit-statusstate' statusstate.pk %}" class="btn btn-app"><i class="fas fa-edit"></i> Edit</a>
+                        <a href="{% url 'edit-statusstate' statusstate.pk %}" class="btn ghost-button">Edit Details</a>
+                        <a href="{% url 'delete-statusstate' statusstate.pk %}" class="btn ghost-red"> Delete Status </a>
                     </td>
                 </tr>
             {% endfor %}

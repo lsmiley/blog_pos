@@ -1,20 +1,7 @@
 {% extends 'index.html' %} {% load render_table from django_tables2 %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!--<script>-->
-<!--        $(document).ready(function()-->
-<!--        {-->
-<!--                var $prodvendorvar=$("prodvendordll");-->
-<!--                    $productvar=$("#productdll");-->
 
-<!--                    $options=$productvar.find('option');-->
-<!--                    $prodvendorvar.on('change',function()-->
-<!--                    {-->
-<!--                        $productvar.html($options.filter('[value="'+this.value+'"]'));-->
-<!--                        }).trigger('change');-->
-<!--        });-->
-
-<!--</script>-->
 {% block content %}
     <div class="page-wrapper">
         <div class="page-breadcrumb">
@@ -186,297 +173,9 @@
 
         </div>
 
-<div class="row">
-<!--	<select id="prodvendorddl">-->
-<!--		<option disabled selected="true">&#45;&#45; Select Vendor &#45;&#45;</option>-->
-<!--		{% for prodvendors in Prodvendordata %}-->
-<!--		<option value="{{prodvendors.id}}">{{Prodvendor.vendorname}}</option>-->
-<!--		{% endfor %}-->
-<!--	</select>-->
-
-<!--	<select id="productddl">-->
-<!--		<option disabled selected="true">&#45;&#45; Select a Product &#45;&#45;</option>-->
-<!--		{% for products in Productdata %}-->
-<!--		<option value="{{products.id}}">{{Product.title}}</option>-->
-<!--		{% endfor %}-->
-<!--	</select>-->
 
 
 
-</div>
-
-<div class="row">
-<!-- <div class="col-md-6">-->
-<!--  <div class="form-group">-->
-<!--    <label for="inputStatus">Vendor</label>-->
-<!--    <select id="prod_vendor" class="form-control-sm custom-select">-->
-<!--      <option selected disabled>Choose a subject</option>-->
-<!--      {% for prodvendor in Prodvendors%}-->
-<!--      <option value="{{prodvendor.id}}">{{prodvendor.vendorname}}</option>-->
-<!--      {% endfor %}-->
-<!--    </select>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--  <div class="form-group">-->
-<!--    <label for="inputStatus">Product</label>-->
-<!--    <select id="avproduct" class="form-control-sm custom-select" name="product">-->
-<!--      <option selected disabled>Choose a product</option>-->
-<!--    </select>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-</div>
-
-
-              <p><b>Vendor : </b>
-         <select name="vendor" class="form-control">
-             <option selected disabled="true">---> Select A Vendor <--- </option>
-                {% for prodvendors in Prodvendor %}
-            <option value="{{ prodvendors.id}}">{{ prodvendors.vendorname}}</option>
-                {% endfor %}
-         </select>
-</p>
-
-<!--  &lt;!&ndash;                          *** Endpoint / Count / Hours/ Band /  Information ****&ndash;&gt;-->
-<!--                                            <div class="row">-->
-<!--                                    <div class="col-md-1"></div>-->
-<!--                                    <div class="col-md-10">-->
-<!--                                    <div class="form-group-sm" style="font:500">-->
-
-
-
-<!--											<div class="row" style="font-weight:bold; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2" style="background-color:#3c3737; color:#ffd800">EndPoint Info:</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">Count</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#ffd800">Hours</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band3</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band4</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band5</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band6</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band7</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band8</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#FFFFFF">FTE Band9</div>-->
-<!--												<div class="col-md-1" style="background-color:#3c3737; color:#ffd800">Total FTE</div>-->
-
-<!--											</div>-->
-<!--											<div class="row" style="font-weight:bold; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2">:</div>-->
-<!--												<div class="col-md-3" style="background-color:#ffcc99;font-weight:bold">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">. </div>-->
-
-<!--											</div>-->
-
-<!--											<div class="row" style="font-weight:normal; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2">Workstations:</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_num_workstation }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_sum_wkstnshourscalc }}</div>-->
-<!--												</div>-->
-
-<!--												<div class="col-md-1" style="background-color:#ffcc99">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99; align-content:center">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-
-<!--												<div class="col-md-1" style="background-color:#ffcc99; font-weight:bold; font-family:Arial">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="row" style="font-weight:normal; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2">Servers:</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_num_server }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_sum_srvshourscalc }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-
-<!--												<div class="col-md-1" style="background-color:#ffcc99; font-weight:bold; font-family:Arial;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="row" style="font-weight:normal; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2">IP / EndPoints:</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_num_ipaddress }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_sum_ipshourscalc }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.125</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.125</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-
-<!--												<div class="col-md-1" style="background-color:#ffcc99; font-weight:bold; font-family:Arial;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="row" style="font-weight:normal; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-2">Additional Consoles:</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_num_console }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">{{ instance.tag_sum_consolehourscalc }}</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.00</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-<!--												<div class="col-md-1" style="background-color:#ffcc99;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-
-<!--												</div>-->
-
-
-<!--												<div class="col-md-1" style="background-color:#ffcc99; font-weight:bold; font-family:Arial;">-->
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px;">0.000</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--											<div class="row" style="font-weight:bold; font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-4" style="background-color:#C6E2EE;font-weight:normal">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--												<div class="col-md-1" style="background-color:#C6E2EE;">.</div>-->
-<!--											</div>-->
-
-<!--											<div class="row" style="font-family:Arial; font-size:10px">-->
-<!--												<div class="col-md-3"></div>-->
-<!--												<div class="col-md-1">-->
-
-<!--													<div style="background-color:#eaeae9; font-weight:bold; height:23px; text-align:center; padding: 5px 3px 3px 3px;">265.000</div>-->
-<!--												</div>-->
-<!--												<div class="col-md-7"></div>-->
-<!--												<div class="col-md-1">-->
-
-<!--													<div style="background-color:#eaeae9; height:23px; text-align:center; padding: 5px 3px 3px 3px; font-weight:bold">0.250</div>-->
-<!--												</div>-->
-
-<!--											</div>-->
-<!--										</div>-->
-
-<!--                                    </div>-->
-<!--                                    <div class="col-md-1"></div>-->
-
-
-
-<!--                                            </div>-->
 
                                   <hr />
             <div class="row">
@@ -730,202 +429,204 @@
 
 <!--                </div>-->
 
-<form method="POST">
+<!--<form method="POST">-->
 
-        <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="col-md-10">
-                <!-- id="orderitem-table" is for ajax crud-->
-                <table id="orderitem-table"
-                    class="table table-sm table-responsive-sm table-hover table-striped text-nowrap table-bordered"
-                    width="100%" style="margin-left:12%;">
-                    <thead class="thead-dark">
-                        <tr>
+<!--        <div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <div class="col-md-10">-->
+<!--                &lt;!&ndash; id="orderitem-table" is for ajax crud&ndash;&gt;-->
+<!--                <table id="orderitem-table"-->
+<!--                    class="table table-sm table-responsive-sm table-hover table-striped text-nowrap table-bordered"-->
+<!--                    width="100%" style="margin-left:12%;">-->
+<!--                    <thead class="thead-dark">-->
+<!--                        <tr>-->
 
-                            <th>Id</th>
-                            <th># Wkstns</th>
+<!--                            <th>Id</th>-->
+<!--                            <th># Wkstns</th>-->
 
-                            <th>Wkstn Hrs.</th>
+<!--                            <th>Wkstn Hrs.</th>-->
 
-                            <th># Srvrs</th>
-                            <th>Srvr Hrs.</th>
-                            <th># IP/EP</th>
-                            <th>IP/EP Hrs</th>
+<!--                            <th># Srvrs</th>-->
+<!--                            <th>Srvr Hrs.</th>-->
+<!--                            <th># IP/EP</th>-->
+<!--                            <th>IP/EP Hrs</th>-->
 
-                            <th>Ttl/Hrs</th>
-                            <th># Endpoint</th>
-                            <th># Consoles</th>
-                            <th>Base</th>
-                            <th>Hrs.</th>
+<!--                            <th>Ttl/Hrs</th>-->
+<!--                            <th># Endpoint</th>-->
+<!--                            <th># Consoles</th>-->
+<!--                            <th>Base</th>-->
+<!--                            <th>Hrs.</th>-->
 
-                        </tr>
-                    </thead>
+<!--                        </tr>-->
+<!--                    </thead>-->
 
-                    <tbody id="get_table_body">
-                        <!--get_table_body is for ajax search-->
-
-
-                        {% for orderitem in orderitems %}
-
-                        <tr>
-
-                            <!-- <td>{{order.orderitem.name}}</td> -->
-
-                            <td>{{orderitem.id}}</td>
-<!--                            <td class="editable" data-id="{{ student.id }}" data-type="name">{{ student.name }}</td>-->
-                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numworkstation">{{orderitem.numworkstation}}</td>
-                            <td>{{orderitem.wkstnshourscalc}}</th>
-                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numserver">{{orderitem.numserver}}</td>
-<!--                            <td>{{orderitem.numserver}}</td>-->
-                            <td>{{orderitem.srvshourscalc}} {{orderitem.unit}}</td>
-                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numipaddress">{{orderitem.numipaddress}}</td>
-<!--                            <td>{{orderitem.numipaddress}}</td>-->
-                            <td>{{orderitem.ipshourscalc}}</td>
-                            <td>{{orderitem.tag_final_totalhourscalc}}</td>
-                            <td>{{orderitem.total_endpoints}}</td>
-                            <td>{{orderitem.qty}}</td>
-                            <td>{{orderitem.price}}</td>
-                            <td>{{orderitem.tag_line_base_hours}}</td>
+<!--                    <tbody id="get_table_body">-->
+<!--                        &lt;!&ndash;get_table_body is for ajax search&ndash;&gt;-->
 
 
+<!--                        {% for orderitem in orderitems %}-->
 
-                            <td>
-                                <button type="button"  data-pid="{{orderitem.id}}" data-target="#AddOrderitem"
-                                    data-toggle="modal" class="btn btn-success btn-sm btn-edit ">
-                                    <i class="fas fa-edit"></i></button>
+<!--                        <tr>-->
 
+<!--                            &lt;!&ndash; <td>{{order.orderitem.name}}</td> &ndash;&gt;-->
 
-                                    <button type="button" data-pid="{{orderitem.id}}"
-                                        class="ml-1 btn btn-danger btn-sm btn-del"><i
-                                            class="fas fa-trash-alt"></i></button>
-<!--                                    <input type="button" value="+Add New" class="btn btn-danger" data-toggle="modal" data-target="#modal-default" style="float:right; margin:10px 10px 10px 0;" />-->
-                                    <span class="btn btn-info btn-sm edit" style="cursor:pointer;" data-toggle="modal" data-target="#modal-Edit"></span>
-
-                            </td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="7" class=" text-center alert alert-danger">No Orderitem Found</td>
-                        </tr>
-
-                        {% endfor %}
+<!--                            <td>{{orderitem.id}}</td>-->
+<!--&lt;!&ndash;                            <td class="editable" data-id="{{ student.id }}" data-type="name">{{ student.name }}</td>&ndash;&gt;-->
+<!--                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numworkstation">{{orderitem.numworkstation}}</td>-->
+<!--                            <td>{{orderitem.wkstnshourscalc}}</th>-->
+<!--                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numserver">{{orderitem.numserver}}</td>-->
+<!--&lt;!&ndash;                            <td>{{orderitem.numserver}}</td>&ndash;&gt;-->
+<!--                            <td>{{orderitem.srvshourscalc}} {{orderitem.unit}}</td>-->
+<!--                            <td class="editable" data-id="{{ orderitem.id }}" data-type="numipaddress">{{orderitem.numipaddress}}</td>-->
+<!--&lt;!&ndash;                            <td>{{orderitem.numipaddress}}</td>&ndash;&gt;-->
+<!--                            <td>{{orderitem.ipshourscalc}}</td>-->
+<!--                            <td>{{orderitem.tag_final_totalhourscalc}}</td>-->
+<!--                            <td>{{orderitem.total_endpoints}}</td>-->
+<!--                            <td>{{orderitem.qty}}</td>-->
+<!--                            <td>{{orderitem.price}}</td>-->
+<!--                            <td>{{orderitem.tag_line_base_hours}}</td>-->
 
 
 
-                    </tbody>
-                </table>
+<!--                            <td>-->
+<!--                                <button type="button"  data-pid="{{orderitem.id}}" data-target="#AddOrderitem"-->
+<!--                                    data-toggle="modal" class="btn btn-success btn-sm btn-edit ">-->
+<!--                                    <i class="fas fa-edit"></i></button>-->
+
+
+<!--                                    <button type="button" data-pid="{{orderitem.id}}"-->
+<!--                                        class="ml-1 btn btn-danger btn-sm btn-del"><i-->
+<!--                                            class="fas fa-trash-alt"></i></button>-->
+<!--&lt;!&ndash;                                    <input type="button" value="+Add New" class="btn btn-danger" data-toggle="modal" data-target="#modal-default" style="float:right; margin:10px 10px 10px 0;" />&ndash;&gt;-->
+<!--                                    <span class="btn btn-info btn-sm edit" style="cursor:pointer;" data-toggle="modal" data-target="#modal-Edit"></span>-->
+
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                        {% empty %}-->
+<!--                        <tr>-->
+<!--                            <td colspan="7" class=" text-center alert alert-danger">No Orderitem Found</td>-->
+<!--                        </tr>-->
+
+<!--                        {% endfor %}-->
 
 
 
-            </div>
-        </div>
+<!--                    </tbody>-->
+<!--                </table>-->
 
 
-    </div>
-</div>
+
+<!--            </div>-->
+<!--        </div>-->
 
 
-</form>
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--</form>-->
 
 <hr>
-	<style type="text/css">
-<!--		body {-->
-<!--			background: rgb(54,217,182);-->
-<!--			background: linear-gradient(90deg, rgba(54,217,182,1) 0%, rgba(32,152,126,1) 43%, rgba(0,212,255,1) 100%);-->
+<!--	<style type="text/css">-->
+<!--&lt;!&ndash;		body {&ndash;&gt;-->
+<!--&lt;!&ndash;			background: rgb(54,217,182);&ndash;&gt;-->
+<!--&lt;!&ndash;			background: linear-gradient(90deg, rgba(54,217,182,1) 0%, rgba(32,152,126,1) 43%, rgba(0,212,255,1) 100%);&ndash;&gt;-->
+<!--&lt;!&ndash;		}&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;		h1, h2, h3, h4, h5, p, span, strike {&ndash;&gt;-->
+<!--&lt;!&ndash;			font-family: 'Montserrat', sans-serif;&ndash;&gt;-->
+<!--&lt;!&ndash;		}&ndash;&gt;-->
+
+
+<!--		#task-container {-->
+<!--			max-width: 900px;-->
+<!--			margin: 0 auto;-->
+<!--			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);-->
+<!--			background-color: #fff;-->
+<!--			margin-top: 100px;-->
+<!--			margin-bottom: 100px;-->
+<!--			justify-content: space-around;-->
+<!--			align-items: flex-start;-->
 <!--		}-->
 
-
-<!--		h1, h2, h3, h4, h5, p, span, strike {-->
-<!--			font-family: 'Montserrat', sans-serif;-->
+<!--		#form-wrapper {-->
+<!--			position: -webkit-sticky;-->
+<!--			position: sticky;-->
+<!--			top: 0rem;-->
+<!--			border-bottom: 1px solid #e9e9e9;-->
+<!--			background-color: #fff;-->
+<!--			box-shadow: 0 3px 8px rgba(0,0,0,0.25);-->
+<!--			padding: 40px;-->
 <!--		}-->
 
+<!--		#submit {-->
+<!--			background-color: #36d9b6;-->
+<!--			border-radius: 0;-->
+<!--			border: 0;-->
+<!--			color: #fff;-->
+<!--		}-->
 
-		#task-container {
-			max-width: 900px;
-			margin: 0 auto;
-			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-			background-color: #fff;
-			margin-top: 100px;
-			margin-bottom: 100px;
-			justify-content: space-around;
-			align-items: flex-start;
-		}
+<!--		.flex-wrapper {-->
+<!--			display: flex;-->
+<!--		}-->
 
-		#form-wrapper {
-			position: -webkit-sticky;
-			position: sticky;
-			top: 0rem;
-			border-bottom: 1px solid #e9e9e9;
-			background-color: #fff;
-			box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-			padding: 40px;
-		}
+<!--		.task-wrapper {-->
+<!--			margin: 5px;-->
+<!--			padding: 5px;-->
+<!--			padding: 20px;-->
+<!--			cursor: pointer;-->
+<!--			border-bottom: 1px solid #e9e9e9;-->
+<!--			color: #686868;-->
+<!--		}-->
+<!--	</style>-->
+<!--	<div class="container">-->
+<!--&lt;!&ndash;		<div class="jumbotron">&ndash;&gt;-->
+<!--&lt;!&ndash;		<h1>ESS Sizing Tool</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;		</div>&ndash;&gt;-->
+<!--		<div id="task-container">-->
+<!--			<div id="form-wrapper">-->
+<!--				<form id="form">-->
+<!--					<div class="flex-wrapper">-->
+<!--						<div style="flex: 3">-->
+<!--							<input id="title" class="form-control" type="text" name="title" placeholder="Add task">-->
+<!--						</div>-->
+<!--						<div style="flex: 2">-->
+<!--							<input id="addlconsole" class="form-control" type="text" name="addlconsole" placeholder="Add">-->
+<!--						</div>-->
+<!--						<div style="flex: 1">-->
+<!--							<input id="numserver" class="form-control" type="text" name="numserver" placeholder="Add task">-->
+<!--						</div>-->
+<!--						<div style="flex: 1">-->
+<!--							<input id="numworkstation" class="form-control" type="text" name="numworkstation" placeholder="Add task">-->
+<!--						</div>-->
+<!--						<div style="flex: 1">-->
+<!--							<input id="productcomplexitybase" class="form-control" type="text" name="productcomplexitybase" placeholder="Add task">-->
+<!--						</div>-->
+<!--						<div style="flex: 1">-->
+<!--							<input id="productcomplexityfac" class="form-control" type="text" name="productcomplexityfac" placeholder="Add task">-->
+<!--						</div>-->
+<!--						<div style="flex: 2">-->
+<!--							<input id="submit" class="btn" type="submit">-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</form>-->
+<!--			</div>-->
 
-		#submit {
-			background-color: #36d9b6;
-			border-radius: 0;
-			border: 0;
-			color: #fff;
-		}
+<!--			<div id="list-wrapper">-->
 
-		.flex-wrapper {
-			display: flex;
-		}
-
-		.task-wrapper {
-			margin: 5px;
-			padding: 5px;
-			padding: 20px;
-			cursor: pointer;
-			border-bottom: 1px solid #e9e9e9;
-			color: #686868;
-		}
-	</style>
-	<div class="container">
-<!--		<div class="jumbotron">-->
-<!--		<h1>ESS Sizing Tool</h1>-->
+<!--			</div>-->
 <!--		</div>-->
-		<div id="task-container">
-			<div id="form-wrapper">
-				<form id="form">
-					<div class="flex-wrapper">
-						<div style="flex: 3">
-							<input id="title" class="form-control" type="text" name="title" placeholder="Add task">
-						</div>
-						<div style="flex: 2">
-							<input id="addlconsole" class="form-control" type="text" name="addlconsole" placeholder="Add">
-						</div>
-						<div style="flex: 1">
-							<input id="numserver" class="form-control" type="text" name="numserver" placeholder="Add task">
-						</div>
-						<div style="flex: 1">
-							<input id="numworkstation" class="form-control" type="text" name="numworkstation" placeholder="Add task">
-						</div>
-						<div style="flex: 1">
-							<input id="productcomplexitybase" class="form-control" type="text" name="productcomplexitybase" placeholder="Add task">
-						</div>
-						<div style="flex: 1">
-							<input id="productcomplexityfac" class="form-control" type="text" name="productcomplexityfac" placeholder="Add task">
-						</div>
-						<div style="flex: 2">
-							<input id="submit" class="btn" type="submit">
-						</div>
-					</div>
-				</form>
-			</div>
 
-			<div id="list-wrapper">
-
-			</div>
-		</div>
-
-	</div>
+<!--	</div>-->
 
 {% endblock %}
 
 {% block extra_js %}
     {% include 'include/ajax_calls.html' %}
+
+{% endblock extra_js %}
 
 
 <script>
@@ -1065,313 +766,312 @@ $('#exampleModal').on('shown.bs.modal', function () {
 </script>
 
 <!--Editable Rows JS-->
-    <script>
-        $(document).ready(function(){
-            $(document).on("dblclick",".editable",function(){
-                var value=$(this).text();
-                var data_type=$(this).data("type");
-                var input_type="text";
-<!--                if(data_type=="created_at")-->
-<!--                {-->
-<!--                    input_type="datetime-local";-->
+<!--    <script>-->
+<!--        $(document).ready(function(){-->
+<!--            $(document).on("dblclick",".editable",function(){-->
+<!--                var value=$(this).text();-->
+<!--                var data_type=$(this).data("type");-->
+<!--                var input_type="text";-->
+<!--&lt;!&ndash;                if(data_type=="created_at")&ndash;&gt;-->
+<!--&lt;!&ndash;                {&ndash;&gt;-->
+<!--&lt;!&ndash;                    input_type="datetime-local";&ndash;&gt;-->
+<!--&lt;!&ndash;                }&ndash;&gt;-->
+<!--                var input="<input type='"+input_type+"' class='input-data' value='"+value+"' class='form-control'>";-->
+<!--                $(this).html(input);-->
+<!--                $(this).removeClass("editable")-->
+<!--            });-->
+
+<!--            $(document).on("blur",".input-data",function(){-->
+<!--                var value=$(this).val();-->
+<!--                var td=$(this).parent("td");-->
+<!--                $(this).remove();-->
+<!--                td.html(value);-->
+<!--                td.addClass("editable");-->
+<!--                var type=td.data("type");-->
+<!--                sendToServer(td.data("id"),value,type);-->
+<!--            });-->
+<!--            $(document).on("keypress",".input-data",function(e){-->
+<!--                var key=e.which;-->
+<!--                if(key==13){-->
+<!--                    var value=$(this).val();-->
+<!--                    var td=$(this).parent("td");-->
+<!--                    $(this).remove();-->
+<!--                    td.html(value);-->
+<!--                    td.addClass("editable");-->
+<!--                   var type=td.data("type");-->
+<!--                   sendToServer(td.data("id"),value,type);-->
 <!--                }-->
-                var input="<input type='"+input_type+"' class='input-data' value='"+value+"' class='form-control'>";
-                $(this).html(input);
-                $(this).removeClass("editable")
-            });
+<!--            });-->
 
-            $(document).on("blur",".input-data",function(){
-                var value=$(this).val();
-                var td=$(this).parent("td");
-                $(this).remove();
-                td.html(value);
-                td.addClass("editable");
-                var type=td.data("type");
-                sendToServer(td.data("id"),value,type);
-            });
-            $(document).on("keypress",".input-data",function(e){
-                var key=e.which;
-                if(key==13){
-                    var value=$(this).val();
-                    var td=$(this).parent("td");
-                    $(this).remove();
-                    td.html(value);
-                    td.addClass("editable");
-                   var type=td.data("type");
-                   sendToServer(td.data("id"),value,type);
-                }
-            });
+<!--            function sendToServer(id,value,type){-->
+<!--                console.log(id);-->
+<!--                console.log(value);-->
+<!--                console.log(type);-->
+<!--                $.ajax({-->
+<!--                    url:"http://127.0.0.1:8080/saveorderitem",-->
+<!--                    type:"POST",-->
+<!--                    data:{id:id,type:type,value:value},-->
+<!--                })-->
+<!--                .done(function(response){-->
+<!--                    console.log(response);-->
+<!--                })-->
+<!--                .fail(function(){-->
+<!--                   console.log("Error Occured");-->
+<!--                });-->
 
-            function sendToServer(id,value,type){
-                console.log(id);
-                console.log(value);
-                console.log(type);
-                $.ajax({
-                    url:"http://127.0.0.1:8080/saveorderitem",
-                    type:"POST",
-                    data:{id:id,type:type,value:value},
-                })
-                .done(function(response){
-                    console.log(response);
-                })
-                .fail(function(){
-                   console.log("Error Occured");
-                });
-
-            }
-        });
-    </script>
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
 
 <!--    ****  To-Do type Popup to Update Security Products Fields ****-->
-	<script type="text/javascript">
-		/*
-			KEY COMPONENTS:
-			"activeItem" = null until an edit button is clicked. Will contain object of item we are editing
-			"list_snapshot" = Will contain previous state of list. Used for removing extra rows on list update
+<!--	<script type="text/javascript">-->
+<!--		/*-->
+<!--			KEY COMPONENTS:-->
+<!--			"activeItem" = null until an edit button is clicked. Will contain object of item we are editing-->
+<!--			"list_snapshot" = Will contain previous state of list. Used for removing extra rows on list update-->
 
-			PROCESS:
-			1 - Fetch Data and build rows "buildList()"
-			2 - Create Item on form submit
-			3 - Edit Item click - Prefill form and change submit URL
-			4 - Delete Item - Send item id to delete URL
-			5 - Cross out completed task - Event handle updated item
-			NOTES:
-			-- Add event handlers to "edit", "delete", "title"
-			-- Render with strike through items completed
-			-- Remove extra data on re-render
-			-- CSRF Token
-		*/
+<!--			PROCESS:-->
+<!--			1 - Fetch Data and build rows "buildList()"-->
+<!--			2 - Create Item on form submit-->
+<!--			3 - Edit Item click - Prefill form and change submit URL-->
+<!--			4 - Delete Item - Send item id to delete URL-->
+<!--			5 - Cross out completed task - Event handle updated item-->
+<!--			NOTES:-->
+<!--			&#45;&#45; Add event handlers to "edit", "delete", "title"-->
+<!--			&#45;&#45; Render with strike through items completed-->
+<!--			&#45;&#45; Remove extra data on re-render-->
+<!--			&#45;&#45; CSRF Token-->
+<!--		*/-->
 
-		function getCookie(name) {
-			var cookieValue = null;
-			if (document.cookie && document.cookie !== '') {
-				var cookies = document.cookie.split(';');
-				for (var i = 0; i < cookies.length; i++) {
-					var cookie = cookies[i].trim();
-					// Does this cookie string begin with the name we want?
-					if (cookie.substring(0, name.length + 1) === (name + '=')) {
-						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-						break;
-					}
-				}
-			}
-			return cookieValue;
-		}
-		var csrftoken = getCookie('csrftoken');
+<!--		function getCookie(name) {-->
+<!--			var cookieValue = null;-->
+<!--			if (document.cookie && document.cookie !== '') {-->
+<!--				var cookies = document.cookie.split(';');-->
+<!--				for (var i = 0; i < cookies.length; i++) {-->
+<!--					var cookie = cookies[i].trim();-->
+<!--					// Does this cookie string begin with the name we want?-->
+<!--					if (cookie.substring(0, name.length + 1) === (name + '=')) {-->
+<!--						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));-->
+<!--						break;-->
+<!--					}-->
+<!--				}-->
+<!--			}-->
+<!--			return cookieValue;-->
+<!--		}-->
+<!--		var csrftoken = getCookie('csrftoken');-->
 
-		var activeItem = null
-		var list_snapshot = []
+<!--		var activeItem = null-->
+<!--		var list_snapshot = []-->
 
-		buildList()
+<!--		buildList()-->
 
-		function buildList() {
-			var wrapper = document.getElementById('list-wrapper')
-			//wrapper.innerHTML = ''
-
-
-
-<!--			var url = 'http://127.0.0.1:8000/api/task-list/'-->
-			var url = 'http://127.0.0.1:8000/order/order_items/'
-
-
-			fetch(url)
-				.then((resp) => resp.json())
-				.then(function (data) {
-					console.log('Data:', data)
-
-					var list = data
-					for (var i in list) {
-
-
-						try {
-							document.getElementById(`data-row-${i}`).remove()
-						} catch (err) {
-
-						}
+<!--		function buildList() {-->
+<!--			var wrapper = document.getElementById('list-wrapper')-->
+<!--			//wrapper.innerHTML = ''-->
 
 
 
-						var title = `<span class="title">${list[i].title}</span>`
-						var addlconsole = `<span class="addlconsole">${list[i].addlconsole}</span>`
-						var numserver = `<span class="numserver">${list[i].numserver}</span>`
-                        var numworkstation = `<span class="numworkstation">${list[i].numworkstation}</span>`
-                        var productcomplexitybase = `<span class="productcomplexitybase">${list[i].productcomplexitybase}</span>`
-                        var productcomplexityfac = `<span class="productcomplexityfac">${list[i].productcomplexityfac}</span>`
-						if (list[i].completed == true) {
-							title = `<strike class="title">${list[i].title}</strike>`
-                            addlconsole = `<strike class="addlconsole">${list[i].addlconsole}</strike>`
-                            numserver = `<strike class="numserver">${list[i].numserver}</strike>`
-                            numworkstation = `<<strike class="numworkstation">${list[i].numworkstation}</strike>`
-                            productcomplexitybase = `<strike class="productcomplexitybase">${list[i].productcomplexitybase}</strike>`
-                            productcomplexityfac = `<strike class="productcomplexityfac">${list[i].productcomplexityfac}</strike>`
-						}
-
-						var item = `
-							<div id="data-row-${i}" class="task-wrapper flex-wrapper">
-								<div style="flex:4">
-									${title}
-								</div>
-								<div style="flex:2">
-									${addlconsole}
-								</div>
-								<div style="flex:1">
-									${numserver}
-								</div>
-								<div style="flex:1">
-									${numworkstation}
-								</div>
-								<div style="flex:1">
-									${productcomplexitybase}
-								</div>
-								<div style="flex:1">
-									${productcomplexityfac}
-								</div>
-								<div style="flex:1">
-									<button class="btn btn-sm btn-outline-info edit">Edit </button>
-								</div>
-								<div style="flex:1">
-									<button class="btn btn-sm btn-outline-dark delete">-</button>
-								</div>
-							</div>
-						`
-						wrapper.innerHTML += item
-
-					}
-
-					if (list_snapshot.length > list.length) {
-						for (var i = list.length; i < list_snapshot.length; i++) {
-							document.getElementById(`data-row-${i}`).remove()
-						}
-					}
-
-					list_snapshot = list
+<!--&lt;!&ndash;			var url = 'http://127.0.0.1:8000/api/task-list/'&ndash;&gt;-->
+<!--			var url = 'http://127.0.0.1:8000/order/order_items/'-->
 
 
-					for (var i in list) {
-						var editBtn = document.getElementsByClassName('edit')[i]
-						var deleteBtn = document.getElementsByClassName('delete')[i]
-						var title = document.getElementsByClassName('title')[i]
-                       /* var addlconsole = document.getElementsByClassName('addlconsole')[i]*/
+<!--			fetch(url)-->
+<!--				.then((resp) => resp.json())-->
+<!--				.then(function (data) {-->
+<!--					console.log('Data:', data)-->
+
+<!--					var list = data-->
+<!--					for (var i in list) {-->
 
 
-						editBtn.addEventListener('click', (function (item) {
-							return function () {
-								editItem(item)
-							}
-						})(list[i]))
+<!--						try {-->
+<!--							document.getElementById(`data-row-${i}`).remove()-->
+<!--						} catch (err) {-->
 
-
-						deleteBtn.addEventListener('click', (function (item) {
-							return function () {
-								deleteItem(item)
-							}
-						})(list[i]))
+<!--						}-->
 
 
 
+<!--						var title = `<span class="title">${list[i].title}</span>`-->
+<!--						var addlconsole = `<span class="addlconsole">${list[i].addlconsole}</span>`-->
+<!--						var numserver = `<span class="numserver">${list[i].numserver}</span>`-->
+<!--                        var numworkstation = `<span class="numworkstation">${list[i].numworkstation}</span>`-->
+<!--                        var productcomplexitybase = `<span class="productcomplexitybase">${list[i].productcomplexitybase}</span>`-->
+<!--                        var productcomplexityfac = `<span class="productcomplexityfac">${list[i].productcomplexityfac}</span>`-->
+<!--						if (list[i].completed == true) {-->
+<!--							title = `<strike class="title">${list[i].title}</strike>`-->
+<!--                            addlconsole = `<strike class="addlconsole">${list[i].addlconsole}</strike>`-->
+<!--                            numserver = `<strike class="numserver">${list[i].numserver}</strike>`-->
+<!--                            numworkstation = `<<strike class="numworkstation">${list[i].numworkstation}</strike>`-->
+<!--                            productcomplexitybase = `<strike class="productcomplexitybase">${list[i].productcomplexitybase}</strike>`-->
+<!--                            productcomplexityfac = `<strike class="productcomplexityfac">${list[i].productcomplexityfac}</strike>`-->
+<!--						}-->
 
-						title.addEventListener('click', (function (item) {
-							return function () {
-								strikeUnstrike(item)
-							}
-						})(list[i]))
+<!--						var item = `-->
+<!--							<div id="data-row-${i}" class="task-wrapper flex-wrapper">-->
+<!--								<div style="flex:4">-->
+<!--									${title}-->
+<!--								</div>-->
+<!--								<div style="flex:2">-->
+<!--									${addlconsole}-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									${numserver}-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									${numworkstation}-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									${productcomplexitybase}-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									${productcomplexityfac}-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									<button class="btn btn-sm btn-outline-info edit">Edit </button>-->
+<!--								</div>-->
+<!--								<div style="flex:1">-->
+<!--									<button class="btn btn-sm btn-outline-dark delete">-</button>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						`-->
+<!--						wrapper.innerHTML += item-->
+
+<!--					}-->
+
+<!--					if (list_snapshot.length > list.length) {-->
+<!--						for (var i = list.length; i < list_snapshot.length; i++) {-->
+<!--							document.getElementById(`data-row-${i}`).remove()-->
+<!--						}-->
+<!--					}-->
+
+<!--					list_snapshot = list-->
 
 
-					}
+<!--					for (var i in list) {-->
+<!--						var editBtn = document.getElementsByClassName('edit')[i]-->
+<!--						var deleteBtn = document.getElementsByClassName('delete')[i]-->
+<!--						var title = document.getElementsByClassName('title')[i]-->
+<!--                       /* var addlconsole = document.getElementsByClassName('addlconsole')[i]*/-->
 
 
-				})
-		}
+<!--						editBtn.addEventListener('click', (function (item) {-->
+<!--							return function () {-->
+<!--								editItem(item)-->
+<!--							}-->
+<!--						})(list[i]))-->
 
 
-		var form = document.getElementById('form-wrapper')
-		form.addEventListener('submit', function (e) {
-			e.preventDefault()
-			console.log('Form submitted')
-			var url = 'http://127.0.0.1:8000/api/task-create/'
-			if (activeItem != null) {
-				var url = `http://127.0.0.1:8000/api/task-update/${activeItem.id}/`
-				activeItem = null
-			}
-
-
-
-			var title = document.getElementById('title').value
-			var addlconsole = document.getElementById('addlconsole').value
-			var numserver = document.getElementById('numserver').value
-            var numworkstation = document.getElementById('numworkstation').value
-            var productcomplexitybase = document.getElementById('productcomplexitybase').value
-            var productcomplexityfac = document.getElementById('productcomplexityfac').value
-			fetch(url, {
-				method: 'POST',
-				headers: {
-					'Content-type': 'application/json',
-					'X-CSRFToken': csrftoken,
-				},
-				body: JSON.stringify({
-					'title': title,
-					'addlconsole': addlconsole,
-					'numserver': numserver,
-                    'numworkstation': numworkstation,
-					'productcomplexitybase': productcomplexitybase,
-                    'productcomplexityfac': productcomplexityfac,})
-
-			}
-			).then(function (response) {
-				buildList()
-				document.getElementById('form').reset()
-			})
-		})
+<!--						deleteBtn.addEventListener('click', (function (item) {-->
+<!--							return function () {-->
+<!--								deleteItem(item)-->
+<!--							}-->
+<!--						})(list[i]))-->
 
 
 
 
-		function editItem(item) {
-			console.log('Item clicked:', item)
-			activeItem = item
-            document.getElementById('title').value = activeItem.title
-			document.getElementById('addlconsole').value = activeItem.addlconsole
-			document.getElementById('numserver').value = activeItem.numserver
-			document.getElementById('numworkstation').value = activeItem.numworkstation
-			document.getElementById('productcomplexitybase').value = activeItem.productcomplexitybase
-            document.getElementById('productcomplexityfac').value = activeItem.productcomplexityfac
-		}
+<!--						title.addEventListener('click', (function (item) {-->
+<!--							return function () {-->
+<!--								strikeUnstrike(item)-->
+<!--							}-->
+<!--						})(list[i]))-->
 
 
-		function deleteItem(item) {
-			console.log('Delete clicked')
-			fetch(`http://127.0.0.1:8000/api/task-delete/${item.id}/`, {
-				method: 'DELETE',
-				headers: {
-					'Content-type': 'application/json',
-					'X-CSRFToken': csrftoken,
-				}
-			}).then((response) => {
-				buildList()
-			})
-		}
-
-		function strikeUnstrike(item) {
-			console.log('Strike clicked')
-
-			item.completed = !item.completed
-			fetch(`http://127.0.0.1:8000/api/task-update/${item.id}/`, {
-				method: 'POST',
-				headers: {
-					'Content-type': 'application/json',
-					'X-CSRFToken': csrftoken,
-				},
-				body: JSON.stringify({ 'title': item.title, 'completed': item.completed })
-			}).then((response) => {
-				buildList()
-			})
-		}
+<!--					}-->
 
 
-	</script>
+<!--				})-->
+<!--		}-->
+
+
+<!--		var form = document.getElementById('form-wrapper')-->
+<!--		form.addEventListener('submit', function (e) {-->
+<!--			e.preventDefault()-->
+<!--			console.log('Form submitted')-->
+<!--			var url = 'http://127.0.0.1:8000/api/task-create/'-->
+<!--			if (activeItem != null) {-->
+<!--				var url = `http://127.0.0.1:8000/api/task-update/${activeItem.id}/`-->
+<!--				activeItem = null-->
+<!--			}-->
+
+
+
+<!--			var title = document.getElementById('title').value-->
+<!--			var addlconsole = document.getElementById('addlconsole').value-->
+<!--			var numserver = document.getElementById('numserver').value-->
+<!--            var numworkstation = document.getElementById('numworkstation').value-->
+<!--            var productcomplexitybase = document.getElementById('productcomplexitybase').value-->
+<!--            var productcomplexityfac = document.getElementById('productcomplexityfac').value-->
+<!--			fetch(url, {-->
+<!--				method: 'POST',-->
+<!--				headers: {-->
+<!--					'Content-type': 'application/json',-->
+<!--					'X-CSRFToken': csrftoken,-->
+<!--				},-->
+<!--				body: JSON.stringify({-->
+<!--					'title': title,-->
+<!--					'addlconsole': addlconsole,-->
+<!--					'numserver': numserver,-->
+<!--                    'numworkstation': numworkstation,-->
+<!--					'productcomplexitybase': productcomplexitybase,-->
+<!--                    'productcomplexityfac': productcomplexityfac,})-->
+
+<!--			}-->
+<!--			).then(function (response) {-->
+<!--				buildList()-->
+<!--				document.getElementById('form').reset()-->
+<!--			})-->
+<!--		})-->
+
+
+
+
+<!--		function editItem(item) {-->
+<!--			console.log('Item clicked:', item)-->
+<!--			activeItem = item-->
+<!--            document.getElementById('title').value = activeItem.title-->
+<!--			document.getElementById('addlconsole').value = activeItem.addlconsole-->
+<!--			document.getElementById('numserver').value = activeItem.numserver-->
+<!--			document.getElementById('numworkstation').value = activeItem.numworkstation-->
+<!--			document.getElementById('productcomplexitybase').value = activeItem.productcomplexitybase-->
+<!--            document.getElementById('productcomplexityfac').value = activeItem.productcomplexityfac-->
+<!--		}-->
+
+
+<!--		function deleteItem(item) {-->
+<!--			console.log('Delete clicked')-->
+<!--			fetch(`http://127.0.0.1:8000/api/task-delete/${item.id}/`, {-->
+<!--				method: 'DELETE',-->
+<!--				headers: {-->
+<!--					'Content-type': 'application/json',-->
+<!--					'X-CSRFToken': csrftoken,-->
+<!--				}-->
+<!--			}).then((response) => {-->
+<!--				buildList()-->
+<!--			})-->
+<!--		}-->
+
+<!--		function strikeUnstrike(item) {-->
+<!--			console.log('Strike clicked')-->
+
+<!--			item.completed = !item.completed-->
+<!--			fetch(`http://127.0.0.1:8000/api/task-update/${item.id}/`, {-->
+<!--				method: 'POST',-->
+<!--				headers: {-->
+<!--					'Content-type': 'application/json',-->
+<!--					'X-CSRFToken': csrftoken,-->
+<!--				},-->
+<!--				body: JSON.stringify({ 'title': item.title, 'completed': item.completed })-->
+<!--			}).then((response) => {-->
+<!--				buildList()-->
+<!--			})-->
+<!--		}-->
+
+
+<!--	</script>-->
 
 {% block javascript %}
 
 {% endblock javascript %}
 
-{% endblock %}

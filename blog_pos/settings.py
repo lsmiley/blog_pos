@@ -56,6 +56,9 @@ INSTALLED_APPS = [
     'configtable.apps.ConfigtableConfig',
     'labordeliverytype.apps.LabordeliverytypeConfig',
     'labordelivery.apps.LabordeliveryConfig',
+    'statusstate',
+    'tntworksheet',
+
 ]
 
 MIDDLEWARE = [
@@ -171,6 +174,6 @@ CKEDITOR_IMAGE_BACKEND = "pillow"
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': None,
+        'toolbar': 'Basic',
     },
 }
