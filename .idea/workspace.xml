@@ -1,51 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="Fix-Up">
-      <change afterPath="$PROJECT_DIR$/order/migrations/0015_alter_order_date.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/templates/gboitem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/templates/delete_statusstate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/templates/edit_statusstate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/templates/statusstate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statusstate/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/templates/delete_tntworksheet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/templates/edit_tntworksheet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/templates/tntworksheet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tntworksheet/views.py" afterDir="false" />
+    <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="major-update-09&#10;&#10;major-update-09">
+      <change afterPath="$PROJECT_DIR$/acctcust/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/avproduct/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configmaster/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configtable/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labordelivery/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labordeliverytype/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0016_auto_20211210_1515.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0017_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0005_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statusstate/migrations/0002_auto_20211213_1705.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acctcust/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/acctcust/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_pos/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_pos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_pos/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/tables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/templates/edit_orderitem.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/edit_orderitem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/templates/order_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/order_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderitem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/orderitem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderitem/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orderitem/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prodvendor/templates/delete_prodvendor.html" beforeDir="false" afterPath="$PROJECT_DIR$/prodvendor/templates/delete_prodvendor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prodvendor/templates/edit_prodvendor.html" beforeDir="false" afterPath="$PROJECT_DIR$/prodvendor/templates/edit_prodvendor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prodvendor/templates/prodvendor.html" beforeDir="false" afterPath="$PROJECT_DIR$/prodvendor/templates/prodvendor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637079591748</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="major-update-09&#10;&#10;major-update-09">
+      <created>1638978859943</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638978859943</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -307,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fix-Up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix-Up" />
+    <MESSAGE value="major-update-09&#10;&#10;major-update-09" />
+    <option name="LAST_COMMIT_MESSAGE" value="major-update-09&#10;&#10;major-update-09" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/order/views.py" />
