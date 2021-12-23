@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="major&#10;&#10;major">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="c5031d22-f01b-4969-96a4-990ec71f6f35" name="Default" comment="major-update-09&#10;&#10;major-update-09">
+      <change afterPath="$PROJECT_DIR$/acctcust/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/avproduct/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configmaster/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configtable/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labordelivery/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labordeliverytype/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0016_auto_20211210_1515.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/migrations/0017_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0005_auto_20211213_1705.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statusstate/migrations/0002_auto_20211213_1705.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog_pos/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_pos/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/templates/order_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/templates/order_update.html" afterDir="false" />
+>>>>>>> c7877ff69d91af9707d4d9db328cbec91abd0d27
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +215,7 @@
       <option name="project" value="LOCAL" />
       <updated>1638978859943</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00004" summary="major&#10;&#10;major">
       <created>1639603592054</created>
       <option name="number" value="00004" />
@@ -204,6 +224,9 @@
       <updated>1639603592054</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+=======
+    <option name="localTasksCounter" value="4" />
+>>>>>>> c7877ff69d91af9707d4d9db328cbec91abd0d27
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -279,8 +302,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Fix-Up" />
     <MESSAGE value="major-update-09&#10;&#10;major-update-09" />
+<<<<<<< HEAD
     <MESSAGE value="major&#10;&#10;major" />
     <option name="LAST_COMMIT_MESSAGE" value="major&#10;&#10;major" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="major-update-09&#10;&#10;major-update-09" />
+>>>>>>> c7877ff69d91af9707d4d9db328cbec91abd0d27
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/order/views.py" />
