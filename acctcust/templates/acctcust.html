@@ -1,10 +1,31 @@
 {% extends 'index.html' %} {% load render_table from django_tables2 %}
 
+{% block title %} Account / CustomerList {% endblock title %}
+
 {% block content %}
-    
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">AcctCUst</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
     <div class="row" style="color: #ea2088; font-style: bold; font-size: 3rem; ">
+        <div class="col-md-3"></div>
         <div class="col-md-8">Account List</div>
-        <div class="col-md-4">               
+        <div class="col-md-3">
             <div style="float:right;"> <a class="btn ghost-blue" href="{% url 'new-acctcust' %}">Add New Account</a> </div>
         </div>
     </div>
@@ -13,7 +34,10 @@
     
     <br>
 
-    <table class="table table-css">
+<div class="row">
+    <div class="col-md-2">.</div>
+    <div class="col-md-9">
+     <table class="table table-css">
 
         <form method="get">
             <div class="input-group search">
@@ -25,7 +49,7 @@
         </form>
 
         <br>
-        
+
         <thead class="thead-inverse align-middle">
             <tr>
                 <th width="35%">Account Name</th>
@@ -38,10 +62,10 @@
                 <th width="30%">Options</th>
             </tr>
         </thead>
-                  
+
 {% if object_list %}
 
-        <tbody>         
+        <tbody>
             {% for acctcust in object_list %}
                 <tr>
                     <td><h4>{{ acctcust.acctname }}</h4></td>
@@ -52,14 +76,15 @@
                     <td class="align-middle">{{ acctcust.wbsiteurl }}</td>
                     <td class="align-middle">{{ acctcust.createdby }}</td>
                     <td class="align-middle">
+                        <a href="{% url 'edit-acctcust' acctcust.pk %}" class="btn btn-app"><i class="fas fa-edit"></i> Edit</a>
                         <a href="{% url 'edit-acctcust' acctcust.pk %}" class="btn ghost-button">Edit Details</a>
                         <a href="{% url 'delete-acctcust' acctcust.pk %}" class="btn ghost-red"> Delete Account </a>
-                    </td>          
+                    </td>
                 </tr>
-            {% endfor %}                   
+            {% endfor %}
         </tbody>
 
-    </table>  
+    </table>
 
     <div class="align-middle">
         {% if is_paginated %}
@@ -85,6 +110,11 @@
         {% endif %}
     </div>
 
+    </div>
+    <div class="col-md-1">.</div>
+
+</div>
+
 {% else %}
 
         <tbody></tbody>   
@@ -96,3 +126,5 @@
 {% endif %}
 
 {% endblock content %}
+
+</div>

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django_tables2',
     'rest_framework',
     'django_ajax',
     'crispy_forms',
@@ -49,9 +50,7 @@ INSTALLED_APPS = [
     'order',
     'orderitem',
     'acctcust.apps.AcctcustConfig',
-    'django_tables2',
     'prodvendor.apps.ProdvendorConfig',
-    'avproduct',
     'configmaster.apps.ConfigmasterConfig',
     'configtable.apps.ConfigtableConfig',
     'labordeliverytype.apps.LabordeliverytypeConfig',
