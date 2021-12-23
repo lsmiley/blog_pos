@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret! 8088
 SECRET_KEY = 'ps$_uwrpjdxab279wynb^&wuletnic2ha)1!krbxv1!4s&6all'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -117,7 +117,7 @@ DATABASES = {
         'NAME': 'sizingtool-04-db',
         'USER': 'sizingadmin',
         'PASSWORD': 'Malware12345',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }

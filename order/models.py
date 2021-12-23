@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.db.models import Sum
 from django.conf import settings
 from django.urls import reverse
@@ -21,7 +22,8 @@ class OrderManager(models.Manager):
 
 
 class Order(models.Model):
-    date = models.DateField(default=datetime.datetime.now())
+    # date = models.DateField(default=datetime.datetime.now())
+    date = models.DateTimeField(default=timezone.now)
     # date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(blank=True, max_length=150)
     timestamp = models.DateField(auto_now_add=True)
@@ -253,6 +255,39 @@ class Order(models.Model):
     totaltransformationhoursitem = models.FloatField(default='0.0')
     numtransitionweeks = models.FloatField(default='0.0')
     numtransformationweeks = models.FloatField(default='0.0')
+
+
+    # # Account Details
+    # rfs_num = models.CharField(blank=True, max_length=150)
+    # sales_connect_num = models.CharField(blank=True, max_length=150)
+    # apptsales_connect_numus_num = models.CharField(blank=True, max_length=150)
+    # sizingtype = models.CharField(blank=True, max_length=150)
+    # due_date = models.DateField()
+    # transistion_weeks = models.FloatField(default='12')
+    # transformation_weeks = models.FloatField(default='12')
+    # prepardedby = models.CharField(blank=True, max_length=150)
+    #
+    # # OTC- One Time Cost: Hours
+    # transition_hours = models.FloatField(default='0.0')
+    # transformation_hours = models.FloatField(default='0.0')
+    # sum_transition_hours = models.FloatField(default='0.0')
+    # sum_transformation_hours = models.FloatField(default='0.0')
+    # first_line_mgr_hrs = models.FloatField(default='0.0')
+    # second_line_mgr_hrs = models.FloatField(default='0.0')
+
+    # # Steady State Hours / FTE
+    # combined_Svcs = models.FloatField(default='0.0')
+    # components = models.FloatField(default='0.0')
+    # custom_Optns = models.FloatField(default='0.0')
+    # addl_Services = models.FloatField(default='0.0')
+    # first_line_mgr_steadystate_hrs = models.FloatField(default='0.0')
+    # second_line_mgr_steadystate_hrs = models.FloatField(default='0.0')
+    # total_steadystate_hours = models.FloatField(default='0.0')
+    #
+    # # FTE
+    # transition_fte = models.FloatField(default='0.0')
+    # transformation_fte = models.FloatField(default='0.0')
+    # total_fte  = models.FloatField(default='0.0')
 
     class Meta:
         ordering = ['-date']
